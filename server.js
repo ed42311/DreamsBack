@@ -16,6 +16,7 @@ const cors = require('cors');
 // Local variables for database
 // Destructure our process.env variables
 const { MONGODB_URI, PORT, FRONTEND_URL } = process.env;
+const port = process.env.NODE_ENV === 'travis' ? 8001 : PORT;  
 
 // build an instance of our app:
 const app = express();
